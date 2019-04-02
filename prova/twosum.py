@@ -1,19 +1,24 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-    	i = nums[0]
-    	j = nums[len(nums)]
-    	lista_retorno = set()
-    	controle = 1	
-    	while controle == 1:
-    		if nums[i] + nums[j] == target:
-    			lista_retorno.add(i)
-    			lista_retorno.add(j)
-    			controle = 0
-    		if nums[i] + nums[j] > target:
-    			j = j-1
 
-    		if nums[i] + nums[j] < target:
-    			i = i+1
-    	return lista_retorno
+lista_retorno = set()
+controle = 1
+numrs = [2,7,11,15]
+alvo=9
+i=0
+j=len(numrs)-1
+
+while controle == 1:
+	if numrs[i] + numrs[j] == alvo:
+		lista_retorno.add(i)
+		lista_retorno.add(j)
+		controle = 0
+	if numrs[i] + numrs[j] > alvo:
+		j = j-1
+	if numrs[i] + numrs[j] < alvo:
+		i = i+1
+#return lista_retorno
+numrs = [2,7,11,15]
+alvo=9
+print (lista_retorno)
+
 
 #meu nome é Marlus Marcos
